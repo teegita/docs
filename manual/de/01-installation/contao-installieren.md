@@ -16,12 +16,13 @@ curl -L http://download.contao.org | tar -xzp
 
 ### Das Contao-Installtool
 
-Um das Contao-Installtool aufzurufen, hängen Sie einfach `/contao/install.php`
-an die URL Ihrer Contao-Installation an. Beachten Sie, dass das Installtool mit
-einem Passwort gegen Brute Force-Attacken geschützt ist und gesperrt wird, wenn
-dreimal hintereinander ein falsches Passwort eingegeben wurde. Um diese Sperre
-aufzuheben, öffnen Sie die Datei `system/config/localconfig.php` in einem
-Texteditor, finden Sie die folgende Zeile und setzen Sie sie auf `0`.
+Um das Contao-Installtool aufzurufen, hängen Sie einfach `/web/install.php` 
+(ehemals `/contao/install.php`) an die URL Ihrer Contao-Installation an. 
+Beachten Sie, dass das Installtool mit einem Passwort gegen Brute Force-Attacken 
+geschützt ist und gesperrt wird, wenn dreimal hintereinander ein falsches Passwort 
+eingegeben wurde. Um diese Sperre aufzuheben, öffnen Sie die Datei `system/config/
+localconfig.php` in einem Texteditor, finden Sie die folgende Zeile und setzen Sie 
+sie auf `0`.
 
 ```php
 $GLOBALS['TL_CONFIG']['installCount'] = 0; // Hebt die automatische Sperre auf
